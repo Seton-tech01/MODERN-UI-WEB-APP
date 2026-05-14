@@ -40,13 +40,28 @@ It focuses on:
 ---
 
 ## Folder Structure
+## Folder Structure
 
 ```bash
-Modern-UI-Web-App/
+AUTOSYSTEM/
+│── pages/
+│
+│── public/
+│   ├── all-images/
+│   ├── css/
+│   └── js/
+│       ├── component/
+│       │   ├── button.js
+│       │   ├── footer.js
+│       │   ├── header.js
+│       │   ├── input.js
+│       │   └── globals.js
+│       └── script.js
+│
+│── auto.html
 │── index.html
-│── script.js
-│── assets/
-│── src/
+│── package.json
+│── package-lock.json
 └── README.md
 ```
 
