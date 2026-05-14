@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+    --body-bg-color: #f8f8f8;
+    --primary-color: #75a7ffe8;
+    --secondary-color: #ef3800;
+    --text-color: #7c7c7c;
+    --white-color: #ffffff;
+    --close-color: #f00;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) #f0f0f0;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: var(--font-title);
+}
+

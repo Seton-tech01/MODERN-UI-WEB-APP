@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/output.css">
+    <script src="public/js/global.js"></script>
+    <script src="public/js/component/button.js"></script>
+    <script src="public/js/component/input.js"></script>
+    <title>AutoSystem - Login</title>
+</head>
+
+<body>
+    <div id="app" class="w-full h-screen flex items-center bg-black/60 justify-center">
+        <div class="w-145 h-100 bg-white rounded-lg shadow-lg p-10 flex flex-col  gap-7">
+            <img class="w-30 h-7" src="./public/all-images/images/nexovaste-9.png" alt="">
+
+
+            <h1 class="text-2xl font-bold text-gray-800">Administrative Login</h1>
+            <div id="emailAddress">
+                        <script>
+                            renderInput("emailAddress", {
+                                placeholder: "Enter Email Address Here",
+                                id: "emailAddress",
+                                type: "email"
+                            });
+
+                        </script>
+                    </div>
+
+                    <div id="password">
+                        <script>
+                            renderInput("password", {
+                                placeholder: "Enter Password Here",
+                                id: "password",
+                                type: "password"
+                            });
+
+                        </script>
+                    </div>
+               
+            <!-- <button onclick="window.location.href='auto.html'"  >Log In</button> -->
+            <div class="w-full flex" id="loginBtn">
+                <script>
+                    renderButton("loginBtn", {
+                        text: "Log In",
+                        id: "loginBtn",
+                        type: "primary-btn",
+                        style:"w-full text-white px-7.5 py-2 rounded-md transition duration-300 cursor-pointer",
+                        onClick: function() {
+                            window.location.href = 'auto.html';
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

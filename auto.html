@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/output.css">
+    <script src="public/js/global.js"></script>
+    <script src="public/js/component/button.js"></script>
+    <script src="public/js/component/input.js"></script>
+
+    <title>AutoSystem</title>
+</head>
+
+<body>
+    <div id="autosystem" class="w-full h-screen flex items-center bg-black/60 justify-center relative z-50">
+        <div id="form" class="w-200 h-140 flex flex-col  gap-7 bg-white rounded-lg px-10">
+
+            <div class="w-full h-14 justify-between items-center flex border-b border-gray-300">
+                <div class="w-30  "><img src="./public/all-images/images/nexovaste-9.png" alt=""></div>
+                <div class=" flex justify-center items-center gap-10 text-black/70 ">
+                    <a href="./index.html" class="cursor-pointer">Home</a>
+                    <a onclick="toggleDiv('record', true);" class="cursor-pointer">View record</a>
+                    <div class="flex flex-col">
+                        <p class="text-xs">Emmanuel Seton Seton</p>
+                        <p class="text-xs">Administrator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full flex justify-center gap-4">
+                <select name="numbers" id="numbers"
+                    class="w-180 h-13 border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">SELECT USER</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                </select>
+            </div>
+
+            <div class="w-full h-10 justify-between flex">
+                <div id="fetch">
+                    <script>
+                        renderButton("fetch", {
+                            text: "Fetch",
+                            id: "fetch",
+                            onClick: function () {
+                                window.location.href = 'auto.html';
+                            }
+                        });
+                    </script>
+                </div>
+
+                <div id="delete">
+                    <script>
+                        renderButton("delete", {
+                            text: "Delete",
+                            id: "delete",
+                            type: "secondary-btn",
+                            onClick: function () {
+                                window.location.href = 'auto.html';
+                            }
+                        });
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="w-full flex justify-between ">
+                <div class="w-110 h-60 flex flex-col justify-between ">
+                    <h2 class="font-bold text-black/70  text-lg">Registration</h2>
+                    
+                    <div id="fullName">
+                        <script>
+                            renderInput("fullName", {
+                                placeholder: "Enter Full Name Here",
+                                id: "fullName",
+                                type: "text"
+                            });
+
+                        </script>
+                    </div>
+
+                    <div id="email">
+                        <script>
+                            renderInput("email", {
+                                placeholder: "Enter Email Here",
+                                id: "email",
+                                type: "email"
+                            });
+
+                        </script>
+                    </div>
+
+                    <div id="phoneNumber">
+                        <script>
+                            renderInput("phoneNumber", {
+                                placeholder: "Enter Phone Number Here",
+                                id: "phoneNumber",
+                                type: "text"
+                            });
+                        </script>
+                    </div>
+
+                </div>
+                <div class="flex flex-col gap-5">
+                    <h2 class="font-bold text-black/70 text-lg">Profile Picture</h2>
+                    <img class="w-50 h-50 rounded-lg cursor-pointer" src="./public/all-images/images/passport.jpg"
+                        alt="">
+                </div>
+            </div>
+
+
+            <div class="h-10 flex gap-5">
+                <div id="save">
+                    <script>
+                        renderButton("save", {
+                            text: "Save",
+                            id: "save",
+                            onClick: function () {
+                                window.location.href = 'auto.html';
+                            }
+                        });
+                    </script>
+                </div>
+                <div id="clear">
+                    <script>
+                        renderButton("clear", {
+                            text: "Clear",
+                            id: "clear",
+                            type: "secondary-btn",
+                            onClick: function () {
+                                window.location.href = 'auto.html';
+                            }
+                        });
+
+                    </script>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div id="record" class="w-full h-screen bg-black/60 absolute hidden justify-center items-center ">
+            <div class="w-250 h-125 bg-white rounded-lg px-10 py-4">
+                <div class="w-full flex justify-between p-3 border-b border-gray-300">
+                    <p class="text-xl">User Record</p>
+                    <div id="close">
+                        <script>
+                            renderButton("close", {
+                                text: "Close",
+                                id: "close",
+                                type: "secondary-btn",
+                                onClick: function () {
+                                    toggleDiv('record', false);
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="w-full p-5 flex justify-center">
+                    <table class="w-full border border-gray-300 text-left">
+                        <thead class="bg-blue-100">
+                            <tr>
+                                <th class="p-2 border border-gray-300">S/N</th>
+                                <th class="p-2 border border-gray-300">User ID</th>
+                                <th class="p-2 border border-gray-300">Full Name</th>
+                                <th class="p-2 border border-gray-300">Email Address</th>
+                                <th class="p-2 border border-gray-300">Phone Number</th>
+                                <th class="p-2 border border-gray-300">Passport</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-2 border border-gray-300">1</td>
+                                <td class="p-2 border border-gray-300">212345678909876789</td>
+                                <td class="p-2 border border-gray-300">Emmanuel Seton Seton</td>
+                                <td class="p-2 border border-gray-300">seton@gmail.com</td>
+                                <td class="p-2 border border-gray-300">09012345678</td>
+                                <td class="p-2 border border-gray-300">trewer</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">1</td>
+                                <td class="p-2 border border-gray-300">212345678909876789</td>
+                                <td class="p-2 border border-gray-300">Emmanuel Seton Seton</td>
+                                <td class="p-2 border border-gray-300">seton@gmail.com</td>
+                                <td class="p-2 border border-gray-300">09012345678</td>
+                                <td class="p-2 border border-gray-300">trewer</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">1</td>
+                                <td class="p-2 border border-gray-300">212345678909876789</td>
+                                <td class="p-2 border border-gray-300">Emmanuel Seton Seton</td>
+                                <td class="p-2 border border-gray-300">seton@gmail.com</td>
+                                <td class="p-2 border border-gray-300">09012345678</td>
+                                <td class="p-2 border border-gray-300">trewer</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2 border border-gray-300">1</td>
+                                <td class="p-2 border border-gray-300">212345678909876789</td>
+                                <td class="p-2 border border-gray-300">Emmanuel Seton Seton</td>
+                                <td class="p-2 border border-gray-300">seton@gmail.com</td>
+                                <td class="p-2 border border-gray-300">09012345678</td>
+                                <td class="p-2 border border-gray-300">trewer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
