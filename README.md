@@ -65,7 +65,3 @@ This project was developed to demonstrate proficiency in modern frontend develop
 GitHub: https://github.com/Seton-tech01
 
 ---
-
-## License
-
-MIT License
