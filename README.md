@@ -40,7 +40,6 @@ It focuses on:
 ---
 
 ## Folder Structure
-## Folder Structure
 
 ```bash
 AUTOSYSTEM/
